@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}    % Def du style de document, voir 2.1
+\usepackage[francais]{babel} 
+\usepackage{times} 
+\usepackage{graphicx} 
+\usepackage[a4paper,margin=2.5cm]{geometry}              % 2.1.2
+\newcommand{\largtt}[1]{{\large\texttt{#1}}}             % 2.18
+\begin{document}                   % Debut du texte      % 2.1
+\parskip 5pt                                             % 2.4.1
+
+\begin{center}
+\LARGE\bfseries Exemple de fichier .tex                  % 2.6
+\end{center}
+
+\section{G\'en\'eralit\'es}                              % 2.1
+
+Voici un exemple simple de fichier .tex qui sera interpr\'et\'e
+par la commande \largtt{latex} et qui pourra \^etre visualis\'e sur 
+\'ecran X par la commande \largtt{xdvi}\footnote{xdvi : {\bfseries x} 
+{\bfseries d}e{\bfseries v}ice {\bfseries i}ndependent}.                   
+
+\section{Formules math\'ematiques}                       % 2.7   
+
+Si on encadre une formule par 2 dollars on obtient dans le texte,
+$\sum_{i=1}^{n} x_{i} = \int_{0}^{1} f$ alors que si on la met dans
+l'environnement \texttt{displaymath} : 
+\begin{displaymath}
+\sum_{i=1}^{n} x_{i} = \int_{0}^{1} f
+\end{displaymath}
+
+\section{Listes}                                         % 2.8
+
+\'Enum\'eration des \'etapes pour la sortie d'un fichier .tex : 
+\begin{enumerate}
+\item cr\'eation de Fn.tex sous \'editeur,
+\item interpr\'etation par la commande {\bfseries latex}, 
+      et cr\'eation de Fn.dvi,
+\item cr\'eation du fichier imprimable par {\bfseries dvips} puis impression.
+\end{enumerate}
+
+\section{Tableaux}                                       % 2.9
+
+\begin{center}
+\begin{tabular}{|l|c||r|} \hline                                
+ligne1 champ1 & champ2  & 23   \\ \hline
+champ1        & champ2  & 123  \\ \hline
+ligne3 champ1 & champ2  & 1    \\ \hline
+\end{tabular}
+\end{center}
+
+\section{Insertion d'une image PostScript}               % 2.10 et 2.11.2
+
+\begin{figure}[h]
+\centerline{\includegraphics[width=3cm]{lcomp.eps}}
+\caption{Ho !! la belle image.}
+\end{figure}
+
+\end{document}               % Fin du texte et du document, voir 2.1
